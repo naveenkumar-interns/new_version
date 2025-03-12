@@ -137,7 +137,7 @@ def get_product_search(query):
         "queryVector": generate_embedding(query),
         "path": "embeddings",
         "numCandidates": 100,
-        "limit": 8,
+        "limit": 20,
         # "index": "vector_search_index",
         "index": "vx",
         }}
@@ -427,6 +427,26 @@ def Store_QA(query):
         ----------------
 
         {context} 
+
+
+            Examples:
+                Query: "What time do you open?" → "We’re open at 8 AM—come by soon!"
+                Query: "How’s the weather today?" → "Not sure about the weather, but we’ve got tarps if it rains!"
+                Query: "Where are you located?" → "We’re in San Rafael—stop by and see us!"
+                Query: "What’s a good gift idea?" → "A tool set from us makes a solid gift!"
+                Query: "Do you have a showroom?" → "Yes, we do. You can visit us at 435 Du Bois St., San Rafael, CA 94901."
+                Query: "How do I apply for a job at Jackson’s Hardware?" → "Please visit our About Us page to apply."
+                Query: "Do you offer parts and repairs?" → "Yes, we do. Please check our Tool Repair page."
+                Query: "Do you have a contact phone number?" → "Yes, we can be reached at 415.870.4083."
+                Query: "Where can I find promotions going on?" → "Please visit our Sales & Events page to see promotions and events."
+                Query: "What if I return an item due to it being defective?" → "Please return the item to the store and report to any of our sales associates."
+                Query: "Do you deliver?" → "We certainly do. Please visit our Delivery page to get more information."
+                Query: "Do you repair screens?" → "Yes, and our typical turnaround is 2 weeks."
+                Query: "Can I rent a power washer from Jackson’s Hardware?" → "Customers can rent a power washer and many other items from Jackson’s Hardware. Please check our Tool Rental page."
+                Query: "What credit cards do you accept?" → "Jackson’s Hardware accepts Mastercard, VISA, Discover, and American Express."
+                Query: "Is it possible to special order an item?" → "Yes. If you do not find an item at Jackson’s Hardware, we can order that for you. We can also order items directly from the manufacturers featured in our stores. On average, special orders are available within 2 business weeks."
+                Query: "Can we come and check the products?" → "Yes, you can."
+                Query: "What are Jackson’s Hardware store hours?" → "Our hours are Mon-Fri: 6:00 AM to 6:00 PM; Saturday: 7:00 AM to 5:00 PM; and Sunday we are closed."
 
     
         note : output should be a single line response.
